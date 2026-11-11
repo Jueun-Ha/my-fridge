@@ -10,7 +10,7 @@
   <header class="site-header">
     <div class="container header-content">
       <a class="brand" href="index.html">MY FRIDGE</a>
-      <a class="header-link" href="index.html">냉장고 닫</a>
+      <a class="header-link" href="index.html">냉장고 닫기</a>
     </div>
   </header>
   <main class="container page-main">
@@ -38,7 +38,14 @@
       </form>
     </section>
     <section class="panel" aria-labelledby="list-title">
-      <div class="section-heading"><h2 id="list-title">식품 목록</h2><span class="muted">정렬</span></div>
+      <div class="section-heading">
+        <h2 id="list-title">식품 목록</h2>
+        <select id="sort-select">
+          <option value="expiry-asc">소비기한 임박 순</option>
+          <option value="name-asc">식품이름 순</option>
+          <option value="recent">최근 등록 순</option>
+        </select>
+      </div>
       <div id="food-list" class="empty-state">
         <p>아직 등록된 식품이 없습니다.</p>
       </div>
