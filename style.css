@@ -20,7 +20,6 @@ p { line-height: 1.7; }
 .primary-button { display: inline-block; background: #327d55; color: #fff; padding: 13px 22px; border-radius: 8px; border: 0; font-size: 15px; font-weight: bold; cursor: pointer; }
 .primary-button:hover:not(:disabled) { background: #266442; }
 .primary-button:disabled, .summary-box:disabled { cursor: not-allowed; opacity: .7; }
-.section-help { color: #65796b; font-size: 13px; }
 .panel { background: #fff; border: 1px solid #e2e9e1; border-radius: 12px; padding: 24px; }
 .page-main { padding-top: 36px; padding-bottom: 50px; }
 .page-heading { margin-bottom: 24px; }
