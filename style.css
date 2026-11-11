@@ -16,6 +16,7 @@ h1 { font-size: 34px; line-height: 1.4; margin: 12px 0 15px; }
 h2 { font-size: 20px; margin: 0 0 12px; }
 p { line-height: 1.7; }
 .intro-text { font-size: 16px; color: #51675b; margin-bottom: 25px; }
+.current-date { font-size:14px; color: #397f59; margin-bottom: 20px; }
 .primary-button { display: inline-block; background: #327d55; color: #fff; padding: 13px 22px; border-radius: 8px; border: 0; font-size: 15px; font-weight: bold; cursor: pointer; }
 .primary-button:hover:not(:disabled) { background: #266442; }
 .primary-button:disabled, .summary-box:disabled { cursor: not-allowed; opacity: .7; }
