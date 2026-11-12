@@ -50,6 +50,21 @@
         <p>아직 등록된 식품이 없습니다.</p>
       </div>
     </section>
+    <section class="panel" aria-labelledby="shopping-title">
+      <div class="section-heading">
+        <h2 id="shopping-title">장보기 목록</h2>
+        <span id="shoppig-count" class="muted">0개</span>
+      </div>
+      <p class="section-help">필요한 식품을 등록하고, 구매했다면 체크해보세요.</p>
+      <form id="shopping-form" class="shopping-form">
+        <div class="field">
+          <label for="shopping-name">구매할 품목</label>
+          <input id="shopping-name" type="text" maxlength="60" placeholder="예: 우유" required>
+        </div>
+        <button class="primary-button" type="submit">장보기 추가</button>
+      </form>
+      <div id="shopping-list" aria-live="polite" class="empty-state">장보기 목록이 비어있습니다</div>
+    </section>
   </main>
   <footer class="site-footer">My Fridge · 웹프로그래밍 프로젝트</footer>
 </body>
