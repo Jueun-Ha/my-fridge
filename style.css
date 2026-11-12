@@ -38,13 +38,101 @@ p { line-height: 1.7; }
 .site-footer { text-align: center; color: #88988e; font-size: 12px; padding: 25px 10px; }
 #sort-select { padding: 8px 12px; border: 1px solid #cdd9ce; border-radius: 7px; background: #fff; color: #26342e; font-size: 14px; cursor: pointer;}
 
-@media (max-width: 620px) {
-  .home-main { padding-top: 30px; }
-  .intro-card { padding: 32px 24px; }
-  h1 { font-size: 27px; }
-  .form-grid { grid-template-columns: 1fr; }
-  .summary-box { padding: 17px 4px; }
-  .summary-box span { font-size: 11px; }
-  .panel { padding: 18px; }
-  .section-heading { align-items: flex-start; }
+/* 2주차: 식품 목록 및 장보기 목록 디자인 */
+
+/* 식품 목록과 장보기 목록 */
+.food-item, .shopping-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 5px;
+  border-bottom: 1px solid #e2e9e1;
+}
+
+/* 식품 이름 */
+.item-name {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* 소비기한 표시 */
+.item-meta {
+  font-size: 13px;
+  color: #66786e;
+  margin-top: 6px;
+}
+
+/* 식품 관리 버튼 배치 */
+.item-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+/* 수량 및 수정·삭제 버튼 */
+.small-button, .secondary-button {
+  padding: 8px 12px;
+  background: #fff;
+  border: 1px solid #cdd9ce;
+  border-radius: 7px;
+  color: #26342e;
+  cursor: pointer;
+}
+
+.small-button:hover, .secondary-button:hover {
+  background: #f1f7f1;
+}
+
+/* 삭제 버튼 */
+.danger-button {
+  color: #c0392b;
+}
+
+/* 수량 표시 */
+.qty-number {
+  margin: 0 5px;
+  font-weight: bold;
+}
+
+/* 수정 취소 버튼 */
+.secondary-button {
+  margin-left: 8px;
+}
+
+/* 숨겨진 버튼은 표시하지 않음 */
+[hidden] {
+  display: none !important;
+}
+
+/* 장보기 설명 */
+.section-help {
+  font-size: 14px;
+  color: #66786e;
+}
+
+/* 장보기 입력 폼 */
+.shopping-form {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.shopping-form .field {
+  flex: 1;
+}
+
+/* 장보기 체크박스 */
+.shopping-item label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* 구매 완료된 품목 */
+.is-checked {
+  text-decoration: line-through;
+  color: #999;
 }
