@@ -49,6 +49,11 @@ p { line-height: 1.7; }
   padding: 15px 5px;
   border-bottom: 1px solid #e2e9e1;
 }
+/* 식품 및 장보기 목록 마지막 구분선 제거 */
+.food-item:last-child,
+.shopping-item:last-child {
+  border-bottom: none;
+}
 
 /* 식품 이름 */
 .item-name {
@@ -129,6 +134,12 @@ p { line-height: 1.7; }
   display: flex;
   align-items: center;
   gap: 10px;
+}
+/* 장보기 체크박스 디자인 */
+.shopping-item input[type="checkbox"] {
+  width: 17px;
+  height: 17px;
+  cursor: pointer;
 }
 
 /* 구매 완료된 품목 */
