@@ -193,5 +193,6 @@ function renderShopping() {
 sortSelect.addEventListener("change", function () {
   renderFoods();
 });
+
 renderFoods();
 renderShopping();
