@@ -18,6 +18,8 @@ const shoppingForm = document.querySelector("#shopping-form");
 const shoppingName = document.querySelector("#shopping-name");
 const shoppingList = document.querySelector("#shopping-list");
 
+const sortSelect = document.querySelector("#sort-select");
+
 // 식품 등록 또는 수정: form 제출 이벤트
 foodForm.addEventListener("submit", function (event) {
   event.preventDefault();
@@ -63,9 +65,22 @@ function renderFoods() {
   }
   foodList.className = "";
   // 배열을 복사한 뒤 소비기한이 빠른 순서로 보여줍니다.
-  const sortedFoods = [...foods].sort(function (a, b) {
+  const sortedFoods = [...foods];
+  
+  if (sortSelect.value === "expiry-asc") {
+  sortedFoods.sort(function (a, b) {
     return a.expiry.localeCompare(b.expiry);
   });
+} else if (sortSelect.value === "name-asc") {
+  sortedFoods.sort(function (a, b) {
+    return a.name.localeCompare(b.name, "ko");
+  });
+} else if (sortSelect.value === "recent") {
+  sortedFoods.sort(function (a, b) {
+    return b.id - a.id;
+  });
+}
+   
   sortedFoods.forEach(function (food) {
     const row = document.createElement("div");
     row.className = "food-item";
