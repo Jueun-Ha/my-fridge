@@ -34,7 +34,8 @@
           <div class="field"><label for="food-quantity">수량</label><input id="food-quantity" name="quantity" type="number" min="1" value="1" required></div>
           <div class="field"><label for="food-expiry">소비기한</label><input id="food-expiry" name="expiryDate" type="date" required></div>
         </div>
-        <button id="food-submit" class="primary-button form-button" type="submit" disabled>식품 등록</button>
+        <button id="food-submit" class="primary-button form-button" type="submit">식품 등록</button>
+        <button id="cancel-edit" class="secondary-button" type="button" hidden>수정 취소</button>
       </form>
     </section>
     <section class="panel" aria-labelledby="list-title">
@@ -53,7 +54,7 @@
     <section class="panel" aria-labelledby="shopping-title">
       <div class="section-heading">
         <h2 id="shopping-title">장보기 목록</h2>
-        <span id="shoppig-count" class="muted">0개</span>
+        <span id="shopping-count" class="muted">0개</span>
       </div>
       <p class="section-help">필요한 식품을 등록하고, 구매했다면 체크해보세요.</p>
       <form id="shopping-form" class="shopping-form">
@@ -67,5 +68,6 @@
     </section>
   </main>
   <footer class="site-footer">My Fridge · 웹프로그래밍 프로젝트</footer>
+<script src="main.js"></script>
 </body>
 </html>
