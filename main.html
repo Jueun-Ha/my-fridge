@@ -18,15 +18,18 @@
       <h1>냉장고 관리하기</h1>
       <p class="muted">냉장고 속 식품을 한 눈에 관리하세요.</p>
     </div>
-    <section class="panel" aria-labelledby="summary-title">
+    <!-- 3주차 화면 구성: 현황과 식품 등록을 한 줄에 배치 -->
+    <div class="dashboard-grid">
+    <section class="panel summary-panel" aria-labelledby="summary-title">
       <h2 id="summary-title">냉장고 현황</h2>
       <div class="summary-grid">
-        <button class="summary-box" type="button" disabled><strong id="total-count">0</strong><span>전체 식품</span></button>
-        <button class="summary-box" type="button" disabled><strong id="soon-count">0</strong><span>소비기한 임박</span></button>
-        <button class="summary-box" type="button" disabled><strong id="expired-count">0</strong><span>소비기한 경과</span></button>
+        <button class="summary-box is-active" type="button" data-filter="all" aria-pressed="true"><strong id="total-count">0</strong><span>전체 식품</span></button>
+        <button class="summary-box" type="button" data-filter="soon" aria-pressed="false"><strong id="soon-count">0</strong><span>소비기한 임박</span></button>
+        <button class="summary-box" type="button" data-filter="expired" aria-pressed="false"><strong id="expired-count">0</strong><span>소비기한 경과</span></button>
       </div>
+      <p class="section-help">(임박 기준: 남은 소비기한 3일 이내)</p>
     </section>
-    <section class="panel" aria-labelledby="register-title">
+    <section class="panel register-panel" aria-labelledby="register-title">
       <h2 id="register-title">식품 등록</h2>
       <form id="food-form">
         <div class="form-grid">
@@ -38,7 +41,8 @@
         <button id="cancel-edit" class="secondary-button" type="button" hidden>수정 취소</button>
       </form>
     </section>
-    <section class="panel" aria-labelledby="list-title">
+    </div>
+    <section class="panel food-list-panel" aria-labelledby="list-title">
       <div class="section-heading">
         <h2 id="list-title">식품 목록</h2>
         <select id="sort-select">
@@ -47,6 +51,7 @@
           <option value="recent">최근 등록 순</option>
         </select>
       </div>
+      <p id="filter-note" class="section-help">전체 식품을 표시하고 있습니다.</p>
       <div id="food-list" class="empty-state">
         <p>아직 등록된 식품이 없습니다.</p>
       </div>
