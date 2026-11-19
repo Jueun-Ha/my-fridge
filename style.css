@@ -147,3 +147,76 @@ p { line-height: 1.7; }
   text-decoration: line-through;
   color: #999;
 }
+
+
+/* 3주차: 소비기한 필터 및 D-day 표시 */
+.summary-box { cursor: pointer; }
+.summary-box:hover { background: #e7f2e8; }
+.summary-box.is-active { border: 2px solid #327d55; background: #e7f2e8; }
+.dday-badge { display: inline-block; margin-top: 8px; padding: 4px 9px; border-radius: 6px; font-size: 12px; font-weight: bold; }
+.status-normal { background: #edf5ef; color: #397f59; }
+.status-soon { background: #fff3d6; color: #9a6300; }
+.status-expired { background: #fde9e9; color: #b33232; }
+
+
+/* 3주차 레이아웃 개선: PC에서는 현황과 식품 등록을 나란히 배치 */
+.page-main { padding-top: 20px; }
+.page-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+.page-heading h1 { font-size: 26px; line-height: 1.3; margin: 0; }
+.page-heading p { margin: 0; font-size: 13px; }
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.3fr);
+  gap: 16px;
+  align-items: stretch;
+  margin-bottom: 16px;
+}
+.dashboard-grid > .panel { min-width: 0; padding: 18px; margin-bottom: 0; }
+.dashboard-grid h2 { margin-bottom: 10px; }
+.dashboard-grid .section-help { margin: 10px 0 0; font-size: 12px; line-height: 1.45; }
+
+/* 현황 카드가 좁은 열에서도 보기 좋도록 간격을 조정 */
+.dashboard-grid .summary-grid { gap: 7px; margin-top: 10px; }
+.dashboard-grid .summary-box { min-width: 0; padding: 13px 5px; }
+.dashboard-grid .summary-box strong { font-size: 23px; margin-bottom: 4px; }
+.dashboard-grid .summary-box span { display: block; font-size: 11px; }
+
+/* 식품 등록 폼을 한 줄로 정리하여 세로 공간을 절약 */
+.dashboard-grid .form-grid {
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.65fr) minmax(0, 1.2fr);
+  gap: 9px;
+}
+.dashboard-grid .field { min-width: 0; }
+.dashboard-grid .field label { font-size: 13px; margin-bottom: 5px; }
+.dashboard-grid .field input { min-width: 0; padding: 9px; font-size: 14px; }
+.dashboard-grid .form-button { margin-top: 13px; padding: 10px 18px; }
+
+/* 첫 화면에서 식품 목록 제목과 내용이 보이도록 간격 축소 */
+.food-list-panel { padding: 18px 22px; }
+.food-list-panel h2 { margin-bottom: 0; }
+.food-list-panel .section-help { margin: 6px 0 10px; }
+.food-list-panel .empty-state { padding: 19px 12px; }
+
+/* 작은 화면에서 입력 칸과 버튼이 겹치지 않도록 배치 */
+@media (max-width: 650px) {
+  .intro-card { padding: 35px 24px; }
+  h1 { font-size: 28px; }
+  .panel { padding: 18px; }
+  .form-grid { grid-template-columns: 1fr; }
+  .summary-grid { gap: 6px; }
+  .summary-box { padding: 14px 5px; }
+  .summary-box strong { font-size: 23px; }
+  .summary-box span { font-size: 11px; }
+  .food-item { flex-direction: column; align-items: stretch; }
+  .item-actions { justify-content: flex-start; }
+  .shopping-form { flex-direction: column; align-items: stretch; }
+  .shopping-form .primary-button { width: 100%; }
+  .secondary-button { margin-left: 0; }
+}
