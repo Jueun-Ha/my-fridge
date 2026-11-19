@@ -4,4 +4,3 @@ const dateArea = document.querySelector("#currentDate");
 
 dateArea.textContent = 
   `${now.getFullYear()}년 ${now.getMonth() + 1}월 ${now.getDate()}일`;
-
